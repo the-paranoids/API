@@ -19,7 +19,7 @@ rep_test = [i for i in range(1,11)]
 session_test = [5,6]
 
 rep_valid = [i for i in range(1,11)]
-session_valid = [5,6]
+session_valid = [5,7]
 
 size = len(rep_training) * len(session_training) # total number of training values
 size2 = len(rep_test) * len(session_test)
@@ -118,9 +118,6 @@ for name in header :
     array2[name] = euclidean(training_data[name],mean_data[name])
 print("EUCLIDEAN DISTANCE",array2)
 
-
-
-
 '''
 sum_temp2 = {}
 
@@ -213,6 +210,14 @@ print(X_test)
 
 X_out = scaler.transform(scores_out)
 print(X_out)
+
+count = 0
+count2 = 0
+for item in range(len(X_out)) :
+    if(X_[item] < abs(X_train[item])) :
+        count+=1
+
+print(count)
 '''
 
 print("\n\nDelta for Euclidean Distance:")
